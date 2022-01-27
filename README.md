@@ -43,5 +43,6 @@ module "lacework_s3_notification_relay" {
 | s3_bucket_arn                        | The S3 bucket ARN is required when setting use_existing_cloudtrail to true   | `string` | n/a          |   yes    |
 | s3_notification_lambda_log_retention | The number of days in which to retain logs for the s3 notification lambda    | `number` | `30`         |    no    |
 | s3_notification_lambda_name          | The name for the Lambda function used for the S3 notification relay          | `string` | `""`         |    no    |
+| s3_notification_log_prefix           | The object prefix for which to create S3 notifications                       | `string` | `"AWSLogs/"` |    no    |
 | s3_notification_role_name            | The name for the IAM Role used for the S3 notification relay Lambda function | `string` | `""`         |    no    |
 | sns_topic_arn                        | The SNS topic ARN                                                            | `string` | n/a          |   yes    |

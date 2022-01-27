@@ -21,6 +21,12 @@ variable "s3_notification_lambda_log_retention" {
   description = "The number of days in which to retain logs for the s3 notification lambda"
 }
 
+variable "s3_notification_log_prefix" {
+  type        = string
+  default     = "AWSLogs/"
+  description = "The object prefix for which to create S3 notifications"
+}
+
 variable "s3_notification_role_name" {
   type        = string
   default     = ""
