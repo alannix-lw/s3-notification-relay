@@ -76,6 +76,7 @@ resource "aws_lambda_function" "s3_notification_relay" {
   role          = aws_iam_role.s3_notification_relay.arn
   handler       = "main.handler"
   runtime       = "python3.9"
+  timeout       = var.s3_notification_lambda_timeout
 
   environment {
     variables = {
